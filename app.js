@@ -16,6 +16,7 @@ function ToBuyController(ShoppingListCheckOffService) {
 AlreadyBoughtController.$inject=['ShoppingListCheckOffService']
 function AlreadyBoughtController(ShoppingListCheckOffService) {
    bought = this
+   bought.boughtItem = ShoppingListCheckOffService.bought
 }
 
 function ShoppingListCheckOffService() {
@@ -44,7 +45,7 @@ function ShoppingListCheckOffService() {
       service.bought = []
       service.Buy = function (index) {
            service.bought.push(service.ToBuy[index])
-           service.ToBuy.splice(index,1)   
+           service.ToBuy.splice(index,1)
       }
 
       return service
