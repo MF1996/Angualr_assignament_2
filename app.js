@@ -9,7 +9,7 @@ ToBuyController.$inject =['ShoppingListCheckOffService']
 function ToBuyController(ShoppingListCheckOffService) {
    buy = this
    buy.ToBuy = ShoppingListCheckOffService.ToBuy
-
+   buy.apply= ShoppingListCheckOffService.Buy
 
 }
 
@@ -41,7 +41,12 @@ function ShoppingListCheckOffService() {
               name: "Eggs",
                quantity: 10
              }]
-     
+      service.bought = []
+      service.Buy = function (index) {
+           service.bought.push(service.ToBuy[index])
+           service.ToBuy.splice(index,1)   
+      }
+
       return service
 }
 
