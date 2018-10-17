@@ -13,8 +13,11 @@
     <li> ShoppingListCheckOffService </li>
   </ul>
 </div>
-
-<ul>
+<div>
+  <h2> View </h2>
+  <span>Two list of shooping  and button to check the item that has been bought</span>
+<ol>
   <li> List shopping </li>
   <li> List thing that are have been biy </li>
-</ul>
+</ol>
+</div>
